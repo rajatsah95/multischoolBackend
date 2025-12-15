@@ -1,0 +1,22 @@
+module.exports = (schema, property = 'body') => {
+  return (req, res, next) => {
+    const { error, value } = schema.validate(req[property], {
+      abortEarly: false,
+      stripUnknown: true,
+    });
+
+    if (error) {
+      return res.status(400).json({
+        message: 'Validation error',
+        errors: error.details.map((err) => ({
+          field: err.path.join('.'),
+          message: err.message,
+        })),
+      });
+    }
+
+    // Replace request data with validated & sanitized data
+    req[property] = value;
+    next();
+  };
+};
