@@ -92,10 +92,14 @@ body-
 
 ## getAllUsers
 ----------------
-GET/       http://localhost:10000/schools/:schoolId/users
+GET/       http://localhost:10000/schools/:schoolId/users?page=2&limit=5
 
 path parameters-
 schoolId as   '1'
+
+query parameters-
+page   as  '2'
+limit  as  '5'
 
 headers-
 token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
@@ -132,10 +136,14 @@ body-
 
 ## getAllStudents
 ----------------
-GET/       http://localhost:10000/schools/:schoolId/students
+GET/       http://localhost:10000/schools/:schoolId/students?page=2&limit=5
 
 path parameters-
 schoolId as   '1'
+
+query parameters-
+page   as  '2'
+limit  as  '5'
 
 headers-
 token as 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzgwMDhiMGQxMmFhM2MxMThhYTAxMyIsImVtYWlsIjoiYUBnbWFpbC5jb20iLCJpYXQiOjE3NDg1MDEwMTYsImV4cCI6MTc0ODUwNDYxNn0.4byosUPVdIv9XLUf2bckeI1o-JLVUJlPIuo_QVXFHCM'
