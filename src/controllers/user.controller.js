@@ -43,7 +43,7 @@ exports.listUsers = async (req, res) => {
     return res.status(403).json({ message: 'Forbidden' });
   }
   const { page = 1, limit = 10 } = req.query;
-  const users = await User.findAll({
+  const users = await User.findAndCountAll({
     where: {
       schoolId: req.params.schoolId,
       isDeleted: false,
